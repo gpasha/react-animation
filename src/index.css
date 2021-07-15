@@ -39,8 +39,7 @@ code {
 }
 
 .square.exiting {
-  /* animation: square 1000ms ease-in alternate-reverse; */
-  animation: square 700ms ease-in alternate-reverse;
+  animation: square 1000ms ease-in alternate-reverse;
 }
 
 .square.exited {

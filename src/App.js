@@ -10,13 +10,15 @@ function App() {
       <hr/>
       <div className={'blocks'}>
         <Transition in={toggle}
-                    // timeout={1000}
-                    timeout={{
-                      enter: 1000,
-                      exit: 700
-                    }}
+                    timeout={1000}
                     mountOnEnter
-                    unmountOnExit>
+                    unmountOnExit
+                    onEnter={() => console.log('onEnter')}                    
+                    onEntering={() => console.log('onEntering')}
+                    onEntered={() => console.log('onEntered')}
+                    onExit={() => console.log('onExit')}
+                    onExiting={() => console.log('onExiting')}
+                    onExited={() => console.log('onExited')}>
           {state => <div className={`square blue ${state}`}>{state}</div>}
         </Transition>
       </div>
