@@ -34,6 +34,7 @@ code {
   height: 200px;
 }
 
+/* for Transition start */
 .square.entering {
   animation: square 1000ms ease-out forwards;
 }
@@ -41,18 +42,7 @@ code {
 .square.exiting {
   animation: square 1000ms ease-in alternate-reverse;
 }
-
-.square.exited {
-  /* animation: square 1000ms ease-in alternate-reverse; */
-  opacity: 0;
-}
-
-/* states:
-'entering'
-'entered'
-'exiting'
-'exited'
-*/
+/* for Transition end */
 
 .square.blue {
   background: cornflowerblue;
@@ -61,6 +51,26 @@ code {
 .square.orange {
   background: coral;
 }
+
+/* for CSSTransition start */
+.so-enter {
+  opacity: 0;
+}
+
+.so-enter-active {
+  opacity: 1;
+  transition: opacity 1s ease-in;
+}
+
+.so-exit {
+  opacity: 1;
+}
+
+.so-exit-active {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+/* for CSSTransition end */
 
 @keyframes square {
   0% {
